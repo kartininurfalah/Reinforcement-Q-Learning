@@ -65,7 +65,7 @@ for i in range(episode):
         next_state = nextState(state, actionIndex)        
         notZeroArray = [x for x in Q[next_state] if x != 0 == 0]        
         value_next_state = notZeroArray
-        
+
         if (value_next_state == []): value_next_state = 0
         
         QValue = actionValue + (GAMMA * np.amax(value_next_state))
